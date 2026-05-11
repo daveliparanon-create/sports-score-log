@@ -1,0 +1,214 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "demo@example.com",
+      "password": "$2a$10$rQqJFJQqJFJQqJFJQqJFQu",
+      "name": "Rolan",
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 1778180247801,
+      "email": "daveharry@gmail.com",
+      "password": "$2a$10$FE09orWi2HWyk5v5r20IoekuvgX/fPPYH9wBbv/ipx99We485IcuW",
+      "name": "Dave Harry Liparanon",
+      "createdAt": "2026-05-07T18:57:27.801Z"
+    },
+    {
+      "id": 1778253351720,
+      "email": "harry@gmail.com",
+      "password": "$2a$10$hHLLRuX2VF2N4VIevS.9/u.x1ftt6J5BURaRHoW0jgA/.6w3l78B6",
+      "name": "Dave Harry",
+      "createdAt": "2026-05-08T15:15:51.720Z"
+    },
+    {
+      "id": 1778408681824,
+      "email": "daveliparanon@gmail.com",
+      "password": "$2a$10$jS2vxOTjPqTNOh.bNZdDFOEIEUXW58DYaF824FG7vvZ5dU6jFCYTu",
+      "name": "harrygwapo",
+      "createdAt": "2026-05-10T10:24:41.824Z"
+    },
+    {
+      "id": 1778409065899,
+      "email": "sean@gmail.com",
+      "password": "$2a$10$w/Sy8p8hx3LYRxMFiKJ/TOb4LDvL6oath8yxoGq/IfPTzDM8ZAY0K",
+      "name": "seangabat",
+      "createdAt": "2026-05-10T10:31:05.899Z"
+    },
+    {
+      "id": 1778482601302,
+      "email": "john12@gmail.com",
+      "password": "$2a$10$j4Jvnq0/HAZbqImkCEsNHeMukjTwo.CSJlC.pDy3zQpMMnmh4rFRO",
+      "name": "otero",
+      "createdAt": "2026-05-11T06:56:41.302Z"
+    },
+    {
+      "id": 1778507804575,
+      "email": "dave@gmail.com",
+      "password": "$2a$10$Me9CstMDYGrsNtzqOvKLyuZWJs37U2zDT/YW3Fa9I/X66SYy9rn3K",
+      "name": "Dave Harry",
+      "createdAt": "2026-05-11T13:56:44.575Z"
+    }
+  ],
+  "matches": [
+    {
+      "id": 1,
+      "teamA": "Lakers",
+      "teamB": "Warriors",
+      "teamAScore": 89,
+      "teamBScore": 92,
+      "status": "live",
+      "sport": "Basketball",
+      "date": "2026-05-08",
+      "time": "20:00",
+      "winner": "",
+      "userId": 1,
+      "createdAt": "2026-05-08T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "teamA": "Real Madrid",
+      "teamB": "Barcelona",
+      "teamAScore": 2,
+      "teamBScore": 1,
+      "status": "finished",
+      "sport": "Football",
+      "date": "2026-05-07",
+      "time": "18:00",
+      "winner": "Real Madrid",
+      "userId": 1,
+      "createdAt": "2026-05-07T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "teamA": "Dodgers",
+      "teamB": "Yankees",
+      "teamAScore": 0,
+      "teamBScore": 0,
+      "status": "upcoming",
+      "sport": "Baseball",
+      "date": "2026-05-10",
+      "time": "15:00",
+      "winner": "",
+      "userId": 1,
+      "createdAt": "2026-05-10T00:00:00.000Z"
+    },
+    {
+      "id": 1778408177516,
+      "teamA": "Cleveland Cavaliers",
+      "teamB": "Detroit Piston",
+      "teamAScore": 115,
+      "teamBScore": 103,
+      "sport": "Basketball",
+      "status": "finished",
+      "date": "2026-05-10",
+      "time": "19:00",
+      "userId": 1778253351720,
+      "createdAt": "2026-05-10T10:16:17.516Z"
+    },
+    {
+      "id": 1778408292825,
+      "teamA": "San Antonio Spurs",
+      "teamB": "Timberwolves Minnesota",
+      "teamAScore": 0,
+      "teamBScore": 0,
+      "sport": "Basketball",
+      "status": "upcoming",
+      "date": "2026-05-10",
+      "time": "19:00",
+      "userId": 1778253351720,
+      "createdAt": "2026-05-10T10:18:12.825Z"
+    },
+    {
+      "id": 1778408961061,
+      "teamA": "Sean",
+      "teamB": "Dongkie",
+      "teamAScore": 3,
+      "teamBScore": 1,
+      "sport": "Tennis",
+      "status": "finished",
+      "date": "2026-05-10",
+      "time": "19:00",
+      "userId": 1778253351720,
+      "createdAt": "2026-05-10T10:29:21.061Z"
+    },
+    {
+      "id": 1778409179463,
+      "teamA": "Los Angeles Lakers",
+      "teamB": "Oklahoma City Thunder",
+      "teamAScore": 103,
+      "teamBScore": 114,
+      "sport": "Basketball",
+      "status": "finished",
+      "date": "2026-05-10",
+      "time": "19:00",
+      "userId": 1778409065899,
+      "createdAt": "2026-05-10T10:32:59.463Z"
+    },
+    {
+      "id": 1778479437993,
+      "teamA": "brgy piti piwpiw wiw-wiw",
+      "teamB": "brgy jison titum",
+      "teamAScore": 105,
+      "teamBScore": 104,
+      "sport": "Basketball",
+      "status": "finished",
+      "date": "2026-05-11",
+      "time": "19:00",
+      "userId": 1778253351720,
+      "createdAt": "2026-05-11T06:03:57.993Z"
+    },
+    {
+      "id": 1778482727891,
+      "teamA": "pandesal",
+      "teamB": "shiomai rice",
+      "teamAScore": 103,
+      "teamBScore": 105,
+      "sport": "Basketball",
+      "status": "finished",
+      "date": "2026-05-11",
+      "time": "19:00",
+      "userId": 1778482601302,
+      "createdAt": "2026-05-11T06:58:47.891Z"
+    },
+    {
+      "id": 1778482815650,
+      "teamA": "New York Knicks",
+      "teamB": "Philadelphia 76ers",
+      "teamAScore": 123,
+      "teamBScore": 109,
+      "sport": "Basketball",
+      "status": "live",
+      "date": "2026-05-11",
+      "time": "19:00",
+      "userId": 1778482601302,
+      "createdAt": "2026-05-11T07:00:15.650Z"
+    },
+    {
+      "id": 1778507868164,
+      "teamA": "New York Knicks",
+      "teamB": "Philadelphia 76ers",
+      "teamAScore": 113,
+      "teamBScore": 111,
+      "sport": "Basketball",
+      "status": "finished",
+      "date": "2026-05-11",
+      "time": "19:00",
+      "userId": 1778507804575,
+      "createdAt": "2026-05-11T13:57:48.164Z"
+    },
+    {
+      "id": 1778511185667,
+      "teamA": "New York Knicks",
+      "teamB": "Philadelphia 76ers",
+      "teamAScore": 113,
+      "teamBScore": 96,
+      "sport": "Basketball",
+      "status": "finished",
+      "date": "2026-05-11",
+      "time": "19:00",
+      "userId": 1778408681824,
+      "createdAt": "2026-05-11T14:53:05.667Z"
+    }
+  ]
+}
