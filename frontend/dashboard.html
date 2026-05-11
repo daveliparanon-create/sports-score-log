@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Sports Score - GOAT Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <div class="dashboard-header-bar">
+            <div class="logo-section">
+                <h1>🏆 SPORTS SCORE | GOAT EDITION</h1>
+            </div>
+            <div class="user-section">
+                <span id="user-name" class="user-name"></span>
+                <button id="add-match-btn" class="btn-add-header">+ Add Match</button>
+                <button id="logout-btn" class="btn-logout">Logout</button>
+            </div>
+        </div>
+        
+        <!-- Welcome Section -->
+        <div class="welcome-section">
+            <h2>Welcome, <span id="welcome-name"></span>!</h2>
+            <p>Track the greatest matches of all time with GOAT stats</p>
+        </div>
+        
+        <!-- Score Summary Cards -->
+        <div class="summary-cards">
+            <div class="card">
+                <div class="card-info">
+                    <h3 id="total-games">0</h3>
+                    <p>Total Games</p>
+                </div>
+            </div>
+            <div class="card live-card">
+                <div class="card-info">
+                    <h3 id="live-games">0</h3>
+                    <p>Live Matches</p>
+                </div>
+            </div>
+            <div class="card finished-card">
+                <div class="card-info">
+                    <h3 id="finished-games">0</h3>
+                    <p>Finished Matches</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Search and Filter -->
+        <div class="search-filter">
+            <input type="text" id="search-input" placeholder="🔍 Search team..." class="search-input">
+            <select id="sport-filter" class="filter-select" title="Filter by sport">
+                <option value="all">All Sports</option>
+                <option value="Basketball">🏀 Basketball</option>
+                <option value="Football">⚽ Football</option>
+                <option value="Baseball">⚾ Baseball</option>
+                <option value="Tennis">🎾 Tennis</option>
+            </select>
+        </div>
+        
+        <!-- Live Matches Section -->
+        <div class="section">
+            <div class="section-header">
+                <h2>🔥 Live Matches</h2>
+                <span class="live-badge">LIVE</span>
+            </div>
+            <div id="live-matches" class="matches-grid"></div>
+        </div>
+        
+        <!-- Upcoming Matches Section -->
+        <div class="section">
+            <div class="section-header">
+                <h2>📅 Upcoming Matches</h2>
+            </div>
+            <div id="upcoming-matches" class="matches-list"></div>
+        </div>
+        
+        <!-- Finished Games Section -->
+        <div class="section">
+            <div class="section-header">
+                <h2>✅ Finished Games</h2>
+            </div>
+            <div id="finished-matches" class="matches-list"></div>
+        </div>
+        
+        <!-- Match List Table (CRUD) -->
+        <div class="section">
+            <div class="section-header">
+                <h2>📋 All Matches</h2>
+            </div>
+            <div class="table-container">
+                <table id="matches-table">
+                    <thead>
+                        <tr>
+                            <th>Teams</th>
+                            <th>Score</th>
+                            <th>Sport</th>
+                            <th>Date & Time</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="matches-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Add/Edit Match Modal -->
+    <div id="match-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Add New Match</h3>
+                <span class="close">&times;</span>
+            </div>
+            <form id="match-form">
+                <input type="hidden" id="match-id">
+                <div class="form-group">
+                    <label for="team-a">Team A</label>
+                    <input type="text" id="team-a" required placeholder="Team A name">
+                </div>
+                <div class="form-group">
+                    <label for="team-b">Team B</label>
+                    <input type="text" id="team-b" required placeholder="Team B name">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="score-a">Score A</label>
+                        <input type="number" id="score-a" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="score-b">Score B</label>
+                        <input type="number" id="score-b" value="0">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="sport">Sport</label>
+                    <select id="sport" required>
+                        <option value="Basketball">🏀 Basketball</option>
+                        <option value="Football">⚽ Football</option>
+                        <option value="Baseball">⚾ Baseball</option>
+                        <option value="Tennis">🎾 Tennis</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" required>
+                        <option value="upcoming">📅 Upcoming</option>
+                        <option value="live">🔴 Live</option>
+                        <option value="finished">✅ Finished</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <input type="time" id="time" required>
+                </div>
+                <div class="modal-buttons">
+                    <button type="submit" class="btn-primary">Save Match</button>
+                    <button type="button" class="btn-secondary" id="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- GOAT Legends Floating Cards -->
+    <div class="goat-card goat-1">🐐 LeBron James | 4x NBA Champion | All-Time Scoring Leader</div>
+    <div class="goat-card goat-2">🐐 Michael Jordan | 6x NBA Champion | 5x MVP</div>
+    <div class="goat-card goat-3">🐐 Lionel Messi | 8x Ballon d'Or | World Cup Winner</div>
+    <div class="goat-card goat-4">🐐 Tom Brady | 7x Super Bowl | 5x Super Bowl MVP</div>
+    <div class="goat-card goat-5">🐐 Serena Williams | 23x Grand Slam | 4x Olympic Gold</div>
+    <div class="goat-card goat-6">🐐 Usain Bolt | 8x Olympic Gold | World Record 9.58</div>
+    <div class="goat-card goat-7">🐐 Babe Ruth | 714 HR | .342 Career Avg</div>
+    <div class="goat-card goat-8">🐐 Muhammad Ali | 56 Wins | The Greatest</div>
+    
+    <!-- Floating Sports Balls - BACKGROUND ONLY -->
+    <div class="ball-basketball">
+        <div class="curve1"></div>
+        <div class="curve2"></div>
+    </div>
+    <div class="ball-soccer">
+        <div class="pentagon"></div>
+        <div class="pentagon"></div>
+        <div class="pentagon"></div>
+        <div class="pentagon"></div>
+        <div class="pentagon"></div>
+    </div>
+    <div class="ball-baseball">
+        <div class="stitch"></div>
+        <div class="stitch"></div>
+        <div class="stitch"></div>
+        <div class="stitch"></div>
+        <div class="stitch"></div>
+        <div class="stitch"></div>
+    </div>
+    <div class="ball-tennis"></div>
+    <div class="ball-football">
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="lace"></div>
+        <div class="lace"></div>
+        <div class="lace"></div>
+    </div>
+    <div class="ball-volleyball">
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+    </div>
+    
+    <!-- GOAT Watermark -->
+    <div class="goat-title">🏆 GREATEST OF ALL TIME 🏆</div>
+    <div class="sports-icons"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Sports Score - GOAT Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>start index.html
+    <div class="container">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h1>🏆 SPORTS SCORE</h1>
+                <p>Greatest Of All Time Edition</p>
+            </div>
+            
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="signup">Sign Up</button>
+            </div>
+            
+            <div id="login-form" class="auth-form active">
+                <h2>Welcome Back Champion</h2>
+                <form id="login">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="btn-primary">Login</button>
+                    <div class="forgot-password">
+                        <a href="#" id="forgot-password-link">Forgot Password?</a>
+                    </div>
+                </form>
+            </div>
+            
+            <div id="signup-form" class="auth-form">
+                <h2>Join the Legends</h2>
+                <form id="signup">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" required placeholder="Create a password (min. 6 characters)">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" required placeholder="Confirm your password">
+                    </div>
+                    <button type="submit" class="btn-primary">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgot-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Reset Password</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Enter your email address to reset your password.</p>
+                <form id="forgot-form">
+                    <div class="form-group">
+                        <label for="reset-email">Email Address</label>
+                        <input type="email" id="reset-email" required placeholder="Enter your email">
+                    </div>
+                    <button type="submit" class="btn-primary">Send Reset Link</button>
+                </form>
+                <div id="reset-message" class="reset-message"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- GOAT Legends Floating Cards -->
+    <div class="goat-card goat-1">🐐 LeBron James | 4x NBA Champion | All-Time Scoring Leader</div>
+    <div class="goat-card goat-2">🐐 Michael Jordan | 6x NBA Champion | 5x MVP</div>
+    <div class="goat-card goat-3">🐐 Lionel Messi | 8x Ballon d'Or | World Cup Winner</div>
+    <div class="goat-card goat-4">🐐 Tom Brady | 7x Super Bowl | 5x Super Bowl MVP</div>
+    <div class="goat-card goat-5">🐐 Serena Williams | 23x Grand Slam | 4x Olympic Gold</div>
+    <div class="goat-card goat-6">🐐 Usain Bolt | 8x Olympic Gold | World Record 9.58</div>
+    <div class="goat-card goat-7">🐐 Babe Ruth | 714 HR | .342 Career Avg</div>
+    <div class="goat-card goat-8">🐐 Muhammad Ali | 56 Wins | The Greatest</div>
+    
+    <!-- Floating Sports Balls - BACKGROUND ONLY -->
+    <div class="ball-basketball">
+        <div class="curve1"></div>
+        <div class="curve2"></div>
+    </div>
+    <div class="ball-soccer">
+        <div class="pentagon"></div>
+        <div class="pentagon"></div>
+        <div class="pentagon"></div>
+        <div class="pentagon"></div>
+        <div class="pentagon"></div>
+    </div>
+    <div class="ball-baseball">
+        <div class="stitch"></div>
+        <div class="stitch"></div>
+        <div class="stitch"></div>
+        <div class="stitch"></div>
+        <div class="stitch"></div>
+        <div class="stitch"></div>
+    </div>
+    <div class="ball-tennis"></div>
+    <div class="ball-football">
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="lace"></div>
+        <div class="lace"></div>
+        <div class="lace"></div>
+    </div>
+    <div class="ball-volleyball">
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+    </div>
+    
+    <!-- GOAT Watermark -->
+    <div class="goat-title">🏆 GREATEST OF ALL TIME 🏆</div>
+    <div class="sports-icons"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
